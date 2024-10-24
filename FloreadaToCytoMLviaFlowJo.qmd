@@ -1,0 +1,100 @@
+---
+title: "Floreada.io to CytoML"
+subtitle: "by David Rach"
+format:
+  html:
+    embed-resources: TRUE
+theme: journal
+toc: true
+number-sections: true
+---
+
+```{r}
+#| eval: FALSE
+#| show-code: TRUE
+install.packages("BiocManager")
+BiocManager::install("BiocStyle")
+BiocManager::install("CytoML")
+BiocManager::install("flowWorkspace")
+BiocManager::install("ggcyto")
+```
+
+```{r}
+#| message: FALSE
+#| warning: FALSE
+library(BiocStyle)
+library(CytoML)
+library(flowWorkspace)
+library(ggcyto)
+```
+
+```{r}
+#| code-fold: show
+Folder <- file.path("C:", "Users", "12692", "Desktop", "FloreadaTesting")
+FlowJoWsp <- list.files(path = Folder, pattern = ".wsp", full = TRUE)
+FlowJoWsp
+```
+
+I am preparing a Cytometry in R course for the spring semester. Part of my current workflow is bringing in a FlowJo workspace into R using the `r Biocpkg("CytoML")` package. This allows bringing in the gates, compensations, and transformations without having to apply them to the raw .fcs files from scratch. 
+
+Since not everyone will have access to a FlowJo license, I was investigating whether Floreado.io's option to export to a FlowJo.wsp is recognized by CytoML. When I tested, I found that CytoML did bring in the unopened Floreada FlowJo.wsp gates and compensation, but the transformation settings didn't parse (only appearing as named list() argument). 
+
+# Unopened Floreada FlowJo.wsp
+
+```{r}
+#| code-fold: show
+ws <- open_flowjo_xml(FlowJoWsp[3])
+gs <- flowjo_to_gatingset(ws=ws, name=1, path = Folder, keywords = "GUID")
+plot(gs)
+```
+
+```{r}
+#| code-fold: show
+gh_get_transformations(gs)
+```
+
+```{r}
+#| code-fold: show
+ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```
+
+# Opened Floreada FlowJo.wsp
+After some further investigation, I realized that as soon as I opened the Floreada FlowJo.wsp in FlowJo, and exited out before modifying anything it would start working, and CytoML would parse successfully the transformations. 
+
+```{r}
+#| code-fold: show
+ws <- open_flowjo_xml(FlowJoWsp[2])
+gs <- flowjo_to_gatingset(ws=ws, name=1, path = Folder, keywords = "GUID")
+plot(gs)
+```
+```{r}
+#| code-fold: show
+gh_get_transformations(gs)[1]
+```
+
+```{r}
+#| code-fold: show
+ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```
+After viewing the XML of the unopened .wsp vs the opened .wsp in R, I found that I only needed to swap the segment under *SampleList |> Transformations* to restore the parse ability. Delving further, I found that the only thing that changed between the unopened and opened .wsp file that was needed to restore the parse ability was adding Comp- in front of the second listing of the fluorophores. 
+
+![XML section affecting the parsing](C:/Users/12692/Desktop/FloreadaTesting/AddingComp.png)
+
+
+# Modified by adding Comp- to Unopened Floreada FlowJo.wsp
+
+```{r}
+ws <- open_flowjo_xml(FlowJoWsp[1])
+gs <- flowjo_to_gatingset(ws=ws, name=1, path = Folder, keywords = "GUID")
+plot(gs)
+```
+
+```{r}
+#| code-fold: show
+gh_get_transformations(gs)[1]
+```
+
+```{r}
+#| code-fold: show
+ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```

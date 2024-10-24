@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<gating:Gating-ML
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:gating="http://www.isac-net.org/std/Gating-ML/v2.0/gating"
+	xmlns:transforms="http://www.isac-net.org/std/Gating-ML/v2.0/transformations"
+	xmlns:data-type="http://www.isac-net.org/std/Gating-ML/v2.0/datatypes"
+	xmlns:floreada="https://floreada.io/gatingml"
+	xsi:schemaLocation="
+	http://www.isac-net.org/std/Gating-ML/v2.0/gating
+	http://flowcyt.sourceforge.net/gating/2.0/xsd/Gating-ML.v2.0.xsd
+	http://www.isac-net.org/std/Gating-ML/v2.0/transformations
+	http://flowcyt.sourceforge.net/gating/2.0/xsd/Transformations.v2.0.xsd
+	http://www.isac-net.org/std/Gating-ML/v2.0/datatypes
+	http://flowcyt.sourceforge.net/gating/2.0/xsd/DataTypes.v2.0.xsd">
+	<data-type:custom-info>
+		<floreada:workspace>
+			<floreada:fcsfile hash="3881513935179736847" hash-type="xxh64" name="68983.fcs" pipelines="All Files" >
+				<floreada:parameters>
+					<floreada:parameter name="Time" gating:transformation-ref="linear_72_0" />
+					<floreada:parameter name="FSC-A" gating:transformation-ref="linear_262144_0" />
+					<floreada:parameter name="FSC-H" gating:transformation-ref="linear_262144_0" />
+					<floreada:parameter name="FSC-W" gating:transformation-ref="linear_262144_0" />
+					<floreada:parameter name="SSC-A" gating:transformation-ref="linear_262144_0" />
+					<floreada:parameter name="SSC-H" gating:transformation-ref="linear_262144_0" />
+					<floreada:parameter name="SSC-W" gating:transformation-ref="linear_262144_0" />
+					<floreada:parameter name="FITC-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="Pacific Blue-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="AmCyan-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="Qdot 605-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="APC-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="Alexa Fluor 700-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="APC-Cy7-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="PE-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="PE-Texas Red-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="PE-Cy5-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					<floreada:parameter name="PE-Cy7-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+				</floreada:parameters>
+				<floreada:display>
+					<floreada:xparameter>
+						<floreada:parameter name="FSC-A"/>
+						<floreada:parameter name="FSC-A"/>
+						<floreada:parameter name="FSC-A"/>
+						<floreada:parameter name="FSC-A"/>
+					</floreada:xparameter>
+					<floreada:yparameter>
+						<floreada:parameter name="SSC-A"/>
+						<floreada:parameter name="SSC-A"/>
+						<floreada:parameter name="SSC-A"/>
+						<floreada:parameter name="SSC-A"/>
+					</floreada:yparameter>
+				</floreada:display>
+				<floreada:fcscompensation pipelines="">
+					<floreada:parameters>
+						<floreada:parameter name="FITC-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="Pacific Blue-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="AmCyan-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="Qdot 605-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="APC-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="Alexa Fluor 700-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="APC-Cy7-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="PE-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="PE-Texas Red-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="PE-Cy5-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+						<floreada:parameter name="PE-Cy7-A" gating:transformation-ref="logicle_1000000_1_4.5_0" />
+					</floreada:parameters>
+					<floreada:display>
+						<floreada:xparameter>
+							<floreada:parameter name="FSC-A"/>
+							<floreada:parameter name="FSC-A"/>
+							<floreada:parameter name="FSC-A"/>
+							<floreada:parameter name="FSC-A"/>
+						</floreada:xparameter>
+						<floreada:yparameter>
+							<floreada:parameter name="FSC-W"/>
+							<floreada:parameter name="SSC-A"/>
+							<floreada:parameter name="SSC-A"/>
+							<floreada:parameter name="SSC-A"/>
+						</floreada:yparameter>
+					</floreada:display>
+					<floreada:gate id="Gate4" name="SingletsFSC" pipelines="">
+						<floreada:display>
+							<floreada:xparameter>
+								<floreada:parameter name="FSC-A"/>
+								<floreada:parameter name="FSC-A"/>
+								<floreada:parameter name="FSC-A"/>
+								<floreada:parameter name="FSC-A"/>
+							</floreada:xparameter>
+							<floreada:yparameter>
+								<floreada:parameter name="SSC-A"/>
+								<floreada:parameter name="FSC-W"/>
+								<floreada:parameter name="FSC-W"/>
+								<floreada:parameter name="FSC-W"/>
+							</floreada:yparameter>
+						</floreada:display>
+						<floreada:gate id="Gate5" name="Lymphocytes" pipelines="">
+							<floreada:display>
+								<floreada:xparameter>
+									<floreada:parameter name="FSC-A"/>
+									<floreada:parameter name="FSC-A"/>
+									<floreada:parameter name="FSC-A"/>
+									<floreada:parameter name="FSC-A"/>
+								</floreada:xparameter>
+								<floreada:yparameter>
+									<floreada:parameter name="AmCyan-A"/>
+									<floreada:parameter name="SSC-A"/>
+									<floreada:parameter name="SSC-A"/>
+									<floreada:parameter name="SSC-A"/>
+								</floreada:yparameter>
+							</floreada:display>
+							<floreada:gate id="Gate6" name="Live" pipelines="">
+								<floreada:display>
+									<floreada:xparameter>
+										<floreada:parameter name="PE-Cy5-A"/>
+										<floreada:parameter name="FSC-A"/>
+										<floreada:parameter name="FSC-A"/>
+										<floreada:parameter name="FSC-A"/>
+									</floreada:xparameter>
+									<floreada:yparameter>
+										<floreada:parameter name="PE-Cy7-A"/>
+										<floreada:parameter name="AmCyan-A"/>
+										<floreada:parameter name="AmCyan-A"/>
+										<floreada:parameter name="AmCyan-A"/>
+									</floreada:yparameter>
+								</floreada:display>
+								<floreada:gate id="Gate7" name="Bcells" pipelines="">
+									<floreada:display>
+										<floreada:xparameter>
+											<floreada:parameter name="PE-Cy5-A"/>
+											<floreada:parameter name="PE-Cy5-A"/>
+											<floreada:parameter name="PE-Cy5-A"/>
+											<floreada:parameter name="PE-Cy5-A"/>
+										</floreada:xparameter>
+										<floreada:yparameter>
+											<floreada:parameter name="PE-Cy7-A"/>
+											<floreada:parameter name="PE-Cy7-A"/>
+											<floreada:parameter name="PE-Cy7-A"/>
+											<floreada:parameter name="PE-Cy7-A"/>
+										</floreada:yparameter>
+									</floreada:display>
+								</floreada:gate>
+								<floreada:gate id="Gate8" name="Tcells" pipelines="">
+									<floreada:display>
+										<floreada:xparameter>
+											<floreada:parameter name="APC-A"/>
+											<floreada:parameter name="PE-Cy5-A"/>
+											<floreada:parameter name="PE-Cy5-A"/>
+											<floreada:parameter name="PE-Cy5-A"/>
+										</floreada:xparameter>
+										<floreada:yparameter>
+											<floreada:parameter name="PE-Cy7-A"/>
+											<floreada:parameter name="PE-Cy7-A"/>
+											<floreada:parameter name="PE-Cy7-A"/>
+											<floreada:parameter name="PE-Cy7-A"/>
+										</floreada:yparameter>
+									</floreada:display>
+									<floreada:gate id="Gate9" name="ydHigh" pipelines="">
+										<floreada:display>
+											<floreada:xparameter>
+												<floreada:parameter name="Pacific Blue-A"/>
+												<floreada:parameter name="APC-A"/>
+												<floreada:parameter name="APC-A"/>
+												<floreada:parameter name="APC-A"/>
+											</floreada:xparameter>
+											<floreada:yparameter>
+												<floreada:parameter name="PE-Texas Red-A"/>
+												<floreada:parameter name="PE-Cy7-A"/>
+												<floreada:parameter name="PE-Cy7-A"/>
+												<floreada:parameter name="PE-Cy7-A"/>
+											</floreada:yparameter>
+										</floreada:display>
+									</floreada:gate>
+									<floreada:gate id="Gate10" name="Notyd" pipelines="">
+										<floreada:display>
+											<floreada:xparameter>
+												<floreada:parameter name="Pacific Blue-A"/>
+												<floreada:parameter name="APC-A"/>
+												<floreada:parameter name="APC-A"/>
+												<floreada:parameter name="APC-A"/>
+											</floreada:xparameter>
+											<floreada:yparameter>
+												<floreada:parameter name="PE-Texas Red-A"/>
+												<floreada:parameter name="PE-Cy7-A"/>
+												<floreada:parameter name="PE-Cy7-A"/>
+												<floreada:parameter name="PE-Cy7-A"/>
+											</floreada:yparameter>
+										</floreada:display>
+										<floreada:gate id="Gate11" name="CD4Tcells" pipelines="">
+											<floreada:display>
+												<floreada:xparameter>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+												</floreada:xparameter>
+												<floreada:yparameter>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+												</floreada:yparameter>
+											</floreada:display>
+										</floreada:gate>
+										<floreada:gate id="Gate12" name="CD8Tcells" pipelines="">
+											<floreada:display>
+												<floreada:xparameter>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+												</floreada:xparameter>
+												<floreada:yparameter>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+												</floreada:yparameter>
+											</floreada:display>
+										</floreada:gate>
+										<floreada:gate id="Gate13" name="CD3+CD4-CD8-" pipelines="">
+											<floreada:display>
+												<floreada:xparameter>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+													<floreada:parameter name="Pacific Blue-A"/>
+												</floreada:xparameter>
+												<floreada:yparameter>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+													<floreada:parameter name="PE-Texas Red-A"/>
+												</floreada:yparameter>
+											</floreada:display>
+										</floreada:gate>
+									</floreada:gate>
+								</floreada:gate>
+							</floreada:gate>
+						</floreada:gate>
+					</floreada:gate>
+				</floreada:fcscompensation>
+			</floreada:fcsfile>
+			<floreada:pipegroup name="All Files">
+				<floreada:pipeconditions>
+					<floreada:pipecondition operand="File Name" operation="contains" arg="" inverse="false"/>
+				</floreada:pipeconditions>
+				<floreada:colormap>
+					<floreada:colormapentry hash="3881513935179736847" color="#122C91"/>
+				</floreada:colormap>
+				<floreada:parameters>
+				</floreada:parameters>
+			</floreada:pipegroup>
+		</floreada:workspace>
+	</data-type:custom-info>
+	<gating:PolygonGate gating:id="Gate4">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="linear_262144_0">
+			<data-type:fcs-dimension data-type:name="FSC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="linear_262144_0">
+			<data-type:fcs-dimension data-type:name="FSC-W"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.1216231684981685"/>
+			<gating:coordinate data-type:value="0.22827684169278997"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5685096153846154"/>
+			<gating:coordinate data-type:value="0.5997501959247649"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5749198717948718"/>
+			<gating:coordinate data-type:value="0.5104085031347962"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.2040407509157509"/>
+			<gating:coordinate data-type:value="0.16714831504702193"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.1216231684981685"/>
+			<gating:coordinate data-type:value="0.22827684169278997"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate5">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="linear_262144_0">
+			<data-type:fcs-dimension data-type:name="FSC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="linear_262144_0">
+			<data-type:fcs-dimension data-type:name="SSC-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.25165979853479853"/>
+			<gating:coordinate data-type:value="0.18595709247648903"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.22876602564102563"/>
+			<gating:coordinate data-type:value="0.10601978840125392"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.24250228937728938"/>
+			<gating:coordinate data-type:value="0.05586304858934169"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.3404876373626374"/>
+			<gating:coordinate data-type:value="0.05743044670846395"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.4256524725274725"/>
+			<gating:coordinate data-type:value="0.10915458463949844"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.45587225274725274"/>
+			<gating:coordinate data-type:value="0.19849627742946707"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.4128319597069597"/>
+			<gating:coordinate data-type:value="0.22984423981191224"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.3404876373626374"/>
+			<gating:coordinate data-type:value="0.21887245297805644"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.2498282967032967"/>
+			<gating:coordinate data-type:value="0.19849627742946707"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.25165979853479853"/>
+			<gating:coordinate data-type:value="0.18595709247648903"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate6">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="linear_262144_0">
+			<data-type:fcs-dimension data-type:name="FSC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="AmCyan-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.19346590909090908"/>
+			<gating:coordinate data-type:value="0.33172511755485895"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.4889204545454545"/>
+			<gating:coordinate data-type:value="0.3285903213166144"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.4552840909090909"/>
+			<gating:coordinate data-type:value="0.17028311128526646"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.1852840909090909"/>
+			<gating:coordinate data-type:value="0.16087872257053293"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.19346590909090908"/>
+			<gating:coordinate data-type:value="0.33172511755485895"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate7">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Cy5-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Cy7-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.3992866847826087"/>
+			<gating:coordinate data-type:value="0.3035119514106583"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.38207653985507245"/>
+			<gating:coordinate data-type:value="0.1937940830721003"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7842504528985508"/>
+			<gating:coordinate data-type:value="0.1718505094043887"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.7824388586956522"/>
+			<gating:coordinate data-type:value="0.3035119514106583"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.4047214673913043"/>
+			<gating:coordinate data-type:value="0.30507934952978055"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.3992866847826087"/>
+			<gating:coordinate data-type:value="0.3035119514106583"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate8">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Cy5-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Cy7-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.16106204710144928"/>
+			<gating:coordinate data-type:value="0.2533552115987461"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.28696784420289856"/>
+			<gating:coordinate data-type:value="0.2564900078369906"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.301460597826087"/>
+			<gating:coordinate data-type:value="0.7110354623824452"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.13751132246376813"/>
+			<gating:coordinate data-type:value="0.7392486285266457"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.09675045289855072"/>
+			<gating:coordinate data-type:value="0.6499069357366771"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.16106204710144928"/>
+			<gating:coordinate data-type:value="0.2533552115987461"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate9">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Cy7-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.42283740942028986"/>
+			<gating:coordinate data-type:value="0.5292172805642633"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.41287364130434784"/>
+			<gating:coordinate data-type:value="0.4179320141065831"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.45272871376811596"/>
+			<gating:coordinate data-type:value="0.36777527429467083"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.555083786231884"/>
+			<gating:coordinate data-type:value="0.48219533699059564"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.6021852355072463"/>
+			<gating:coordinate data-type:value="0.5981827978056427"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.5867866847826086"/>
+			<gating:coordinate data-type:value="0.6781201018808778"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.4880548007246377"/>
+			<gating:coordinate data-type:value="0.6028849921630094"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.42283740942028986"/>
+			<gating:coordinate data-type:value="0.5292172805642633"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate10">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="APC-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Cy7-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.2606997282608696"/>
+			<gating:coordinate data-type:value="0.7157376567398119"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.24620697463768115"/>
+			<gating:coordinate data-type:value="0.22984423981191224"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.18733016304347827"/>
+			<gating:coordinate data-type:value="0.2235746473354232"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.15834465579710144"/>
+			<gating:coordinate data-type:value="0.7188724529780565"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.2606997282608696"/>
+			<gating:coordinate data-type:value="0.7157376567398119"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate11">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="Pacific Blue-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Texas Red-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.18280117753623187"/>
+			<gating:coordinate data-type:value="0.7047658699059561"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.19095335144927536"/>
+			<gating:coordinate data-type:value="0.3630730799373041"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.25707653985507245"/>
+			<gating:coordinate data-type:value="0.35366869122257055"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.25617074275362317"/>
+			<gating:coordinate data-type:value="0.7314116379310345"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.18280117753623187"/>
+			<gating:coordinate data-type:value="0.7047658699059561"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate12">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="Pacific Blue-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Texas Red-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.331351902173913"/>
+			<gating:coordinate data-type:value="0.27216398902821315"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.3222939311594203"/>
+			<gating:coordinate data-type:value="0.1765527037617555"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.6882359601449275"/>
+			<gating:coordinate data-type:value="0.18125489811912227"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.6882359601449275"/>
+			<gating:coordinate data-type:value="0.2737313871473354"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.331351902173913"/>
+			<gating:coordinate data-type:value="0.27216398902821315"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<gating:PolygonGate gating:id="Gate13">
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="Pacific Blue-A"/>
+		</gating:dimension>
+		<gating:dimension gating:compensation-ref="FCS" gating:transformation-ref="logicle_1000000_1_4.5_0">
+			<data-type:fcs-dimension data-type:name="PE-Texas Red-A"/>
+		</gating:dimension>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.1782721920289855"/>
+			<gating:coordinate data-type:value="0.2752987852664577"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.17646059782608695"/>
+			<gating:coordinate data-type:value="0.15617652821316613"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.24167798913043478"/>
+			<gating:coordinate data-type:value="0.1546091300940439"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.24439538043478262"/>
+			<gating:coordinate data-type:value="0.28313577586206895"/>
+		</gating:vertex>
+		<gating:vertex>
+			<gating:coordinate data-type:value="0.1782721920289855"/>
+			<gating:coordinate data-type:value="0.2752987852664577"/>
+		</gating:vertex>
+	</gating:PolygonGate>
+	<transforms:transformation transforms:id="linear_72_0">
+		<transforms:flin transforms:T="72" transforms:A="0"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="linear_262144_0">
+		<transforms:flin transforms:T="262144" transforms:A="0"/>
+	</transforms:transformation>
+	<transforms:transformation transforms:id="logicle_1000000_1_4.5_0">
+		<transforms:logicle transforms:T="1000000" transforms:W="1" transforms:M="4.5" transforms:A="0"/>
+	</transforms:transformation>
+</gating:Gating-ML>
