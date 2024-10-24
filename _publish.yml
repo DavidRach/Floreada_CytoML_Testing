@@ -1,0 +1,4 @@
+- source: FloreadaToCytoMLviaFlowJo.qmd
+  quarto-pub:
+    - id: 1e35f739-2ba0-41ca-b4cf-fcb0a72990c7
+      url: 'https://davidrach.quarto.pub/floreadatorviacytoml'

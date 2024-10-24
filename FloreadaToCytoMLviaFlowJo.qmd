@@ -1,12 +1,12 @@
 ---
-title: "Floreada.io to CytoML"
+title: "Floreada.io to R via CytoML "
 subtitle: "by David Rach"
 format:
   html:
     embed-resources: TRUE
 theme: journal
 toc: true
-number-sections: true
+number-sections: FALSE
 ---
 
 ```{r}
@@ -78,7 +78,7 @@ ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_g
 ```
 After viewing the XML of the unopened .wsp vs the opened .wsp in R, I found that I only needed to swap the segment under *SampleList |> Transformations* to restore the parse ability. Delving further, I found that the only thing that changed between the unopened and opened .wsp file that was needed to restore the parse ability was adding Comp- in front of the second listing of the fluorophores. 
 
-![XML section affecting the parsing](C:/Users/12692/Desktop/FloreadaTesting/AddingComp.png)
+![XML section affecting the parsing](AddingComp.png)
 
 
 # Modified by adding Comp- to Unopened Floreada FlowJo.wsp
@@ -97,4 +97,20 @@ gh_get_transformations(gs)[1]
 ```{r}
 #| code-fold: show
 ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```
+
+# Final Thoughts
+
+Changing the XML by adding Comp- to the second repeat of the Fluorophore list was sufficient to allow the unopened Floreada .wsp output to be parsed by CytoML. Not sure how easy or difficult it would be to modify Floreada's export as .wsp XML, but if it could be added in a future update, it would allow Floreada gated .wsp files to be easily brought into R via CytoML for subsequent data analysis. 
+
+
+# Data Availability
+
+All data for this example (fcs file, unopened/opened/edited .wsp, etc.) can be found in my github [repository](https://github.com/DavidRach/Floreada_CytoML_Testing)
+
+
+# System Information
+```{r}
+#| code-fold: show
+sessionInfo()
 ```
