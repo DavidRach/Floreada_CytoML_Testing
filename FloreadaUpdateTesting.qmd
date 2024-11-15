@@ -9,6 +9,8 @@ toc: true
 number-sections: FALSE
 ---
 
+I only have a bit of time to glance at the updated version this morning. The updated unopened .wsp file now does show listed transformations, but they are not applied to the plotting. The updated unopened edited version does still fix this version. Noticed an unusual behavior on the ggcyto plot showing Comp- where not normally on the display line, so need to look at the .wsp a little bit closer to figure out what's going on. 
+
 ```{r}
 #| eval: FALSE
 #| show-code: TRUE
@@ -53,7 +55,7 @@ gh_get_transformations(gs)
 
 ```{r}
 #| code-fold: show
-ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+ggcyto(gs[1], subset="Live", aes(x="PE-Cy5-A", y="PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
 ```
 
 
@@ -75,7 +77,7 @@ gh_get_transformations(gs)
 
 ```{r}
 #| code-fold: show
-ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+ggcyto(gs[1], subset="Live", aes(x="PE-Cy5-A", y="PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
 ```
 
 # Updated Edited
