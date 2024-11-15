@@ -1,0 +1,98 @@
+---
+title: "Updated Test Floreada.io to R via CytoML "
+subtitle: "by David Rach"
+format:
+  html:
+    embed-resources: TRUE
+theme: journal
+toc: true
+number-sections: FALSE
+---
+
+```{r}
+#| eval: FALSE
+#| show-code: TRUE
+install.packages("BiocManager")
+BiocManager::install("BiocStyle")
+BiocManager::install("CytoML")
+BiocManager::install("flowWorkspace")
+BiocManager::install("ggcyto")
+```
+
+```{r}
+#| message: FALSE
+#| warning: FALSE
+library(BiocStyle)
+library(CytoML)
+library(flowWorkspace)
+library(ggcyto)
+```
+
+```{r}
+#| code-fold: show
+Folder <- file.path("C:", "Users", "12692", "Desktop", "FloreadaTesting")
+FlowJoWsp <- list.files(path = Folder, pattern = "wsp", full = TRUE)
+FlowJoWsp
+```
+
+# Original Unopened  Floreada FlowJo.wsp
+
+Upon sending to CytoML, transformations just returned as a named list()  argument and no transformation was applied to plots. 
+
+```{r}
+#| code-fold: show
+ws <- open_flowjo_xml(FlowJoWsp[3])
+gs <- flowjo_to_gatingset(ws=ws, name=1, path = Folder, keywords = "GUID")
+plot(gs)
+```
+
+```{r}
+#| code-fold: show
+gh_get_transformations(gs)
+```
+
+```{r}
+#| code-fold: show
+ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```
+
+
+# Updated Unopened Floreada FlowJo.wsp
+
+Upon sending to CytoML, transformations just returned as a named list()  argument and no transformation was applied to plots. 
+
+```{r}
+#| code-fold: show
+ws <- open_flowjo_xml(FlowJoWsp[4])
+gs <- flowjo_to_gatingset(ws=ws, name=1, path = Folder, keywords = "GUID")
+plot(gs)
+```
+
+```{r}
+#| code-fold: show
+gh_get_transformations(gs)
+```
+
+```{r}
+#| code-fold: show
+ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```
+
+# Updated Edited
+
+```{r}
+#| code-fold: show
+ws <- open_flowjo_xml(FlowJoWsp[5])
+gs <- flowjo_to_gatingset(ws=ws, name=1, path = Folder, keywords = "GUID")
+plot(gs)
+```
+
+```{r}
+#| code-fold: show
+gh_get_transformations(gs)
+```
+
+```{r}
+#| code-fold: show
+ggcyto(gs[1], subset="Live", aes(x="Comp-PE-Cy5-A", y="Comp-PE-Cy7-A")) + geom_gate() + geom_hex(bins=170)
+```
